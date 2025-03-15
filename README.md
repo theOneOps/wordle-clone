@@ -1,4 +1,42 @@
-# React + TypeScript + Vite
+# Here are the note of theoneops
+
+I have dockerize the project, so to launch it just : 
+
+execute this command:
+
+```
+docker-compose up
+```
+and to close the execution do :
+```
+Ctrl + C
+```
+then
+```
+docker-compose down
+```
+
+unless, you open another terminal and just execute : 
+```
+docker-compose down
+```
+
+What I have done on the project: 
+
+- [X] Same features as the wordle game itself (with animation reveal and so on...)
+- [X] Same logic of the wordle game
+- [x] Addition of a server to get fetch from an API a word in french...
+
+## Todo:
+- [ ] Add security with some lazy loading in the game
+- [ ] Improve the animation reveal for the letters so that it looks exactly as the wordle game (the delay in the reveal)
+
+**********************************************************************************************
+
+
+# Here is the start of the vite initial text in this README.md
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
