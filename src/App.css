@@ -1,0 +1,106 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.grids {
+  display: grid;
+  grid-template-rows: repeat(6, 80px);
+  grid-template-columns: repeat(5, 80px);
+  gap: 10;
+}
+
+.flip-card {
+  width: 70px;
+  height: 70px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family:'Times New Roman', Times, serif;
+  perspective: 1000px;
+}
+
+.flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.flip-card-front {
+  color: white;
+}
+
+.flip-card-back {
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.after-enter{
+  transform: rotateX(180deg); 
+}
+
+.not-in-word{
+  background-color: rgb(97, 94, 94);
+}
+
+.correct{
+  background-color: rgb(3, 102, 5);
+}
+
+.incorrect{
+  background-color: rgb(110, 100, 14);
+}
+
+h1
+{
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.solution-class{
+  width: 350px;
+  text-align: center;
+}
+
+.solution-class span
+{
+  display: block;
+  color:crimson;
+  font-size: 40px;
+}
+

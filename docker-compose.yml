@@ -1,0 +1,24 @@
+services:
+  server:
+    build: ./server
+    container_name: server_node
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    working_dir: /app
+
+  frontend:
+    build: ./
+    container_name: front_node
+    ports:
+      - '5173:5173'
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+    working_dir: /app
+
+    depends_on:
+      - server

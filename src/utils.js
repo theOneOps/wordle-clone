@@ -1,0 +1,1 @@
+apiUrl = "https://random-word-api.herokuapp.com/word?number=10&lang=fr&length=10"
