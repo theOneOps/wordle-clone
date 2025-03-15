@@ -1,4 +1,4 @@
-# Here are the note of theoneops
+# Here are the note of theOneOps
 
 I have dockerize the project, so to launch it just : 
 
@@ -30,12 +30,12 @@ What I have done on the project:
 ## Todo:
 - [ ] Add security with some lazy loading in the game
 - [ ] Improve the animation reveal for the letters so that it looks exactly as the wordle game (the delay in the reveal)
-- [ ] filter the word to find (like removing all the ô, â é, and so on...)
+- [ ] Filter the word to find (like removing all the ô, â é, and so on... before using as the word to find)
 
 **********************************************************************************************
 
 
-# Here is the start of the vite initial text in this README.md
+# Here is the beginning of the vite initial's text in this README.md's file
 
 ## React + TypeScript + Vite
 
