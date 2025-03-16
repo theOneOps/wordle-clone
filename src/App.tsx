@@ -27,12 +27,18 @@ function App() {
 
   const [findSolution, setFindSolution] = useState(false);
 
+  // function to remove all accents on vowel
+  function removeAccents(str:string) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
   const fetchWord = async () => {
     try {
       const api = "http://localhost:5000/api/words";
       const response = await fetch(api);
       const data: string[] = await response.json();
-      setSolution(data[0].split(""));
+
+      setSolution(removeAccents(data[0]).split(""));
 
       setClassesHeads(
         Array(6).fill(Array(data[0].split("").length).fill("flip-card-inner"))
@@ -171,7 +177,7 @@ function App() {
         {grids.map((line, idx) =>
           line.map((letter, index) => (
             <div className="flip-card" key={`${idx}${index}`}>
-              <div className={classesHeads[idx][index]}>
+              <div className={classesHeads[idx][index]} style={{transitionDelay:`0.${index}s` }}>
                 <div className="flip-card-front">{letter}</div>
                 <div className={classes[idx][index]}>{letter}</div>
               </div>

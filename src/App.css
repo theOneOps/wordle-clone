@@ -90,6 +90,7 @@ h1
 {
   text-transform: capitalize;
   margin-bottom: 10px;
+  font-size: clamp(5rem, calc(7vw+1rem), 8rem);
 }
 
 .solution-class{
